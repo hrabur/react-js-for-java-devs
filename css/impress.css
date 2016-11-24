@@ -58,7 +58,6 @@ a:focus {
 .step {
     position: relative;
     width: 900px;
-    padding: 40px;
     margin: 20px auto;
 
     -webkit-box-sizing: border-box;
@@ -112,4 +111,11 @@ div.step.slide {
   background-position: right 30px bottom 30px;
   background-size: 150px;
   background-repeat: no-repeat;
+}
+
+pre.reset {
+  border: 0px;
+  padding: 0px;
+  margin: 0px;
+  font-size: 21px;
 }

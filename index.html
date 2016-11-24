@@ -15,8 +15,8 @@
     <link rel="apple-touch-icon" href="apple-touch-icon.png" />
 
     <!--link rel="stylesheet" type="text/css" href="http://fonts.googleapis.com/css?family=Ubuntu:regular,bold&subset=Latin"-->
-    <link rel="stylesheet" href="http://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.8.0/styles/default.min.css">
     <link rel="stylesheet" href="css/bootstrap.min.css">
+    <link rel="stylesheet" href="css/atom-one-dark.css">
 </head>
 
 <body class="impress-not-supported">
@@ -47,7 +47,7 @@
     </ul></h3>
   </div>
 
-  <div id="full-stack-java-dev-1" class="step slide" data-x="1000" data-y="-2500" data-rotate="90">
+  <div id="full-stack-java-dev-spec" class="step slide" data-x="1000" data-y="-2500" data-rotate="90">
     <h2>Full stack Java developer</h2>
     <p>If you open an average job advertisment for Java EE developer you'll see the
       description of what a <strong>Full stack Java developer</strong> means</p>
@@ -55,53 +55,73 @@
     <p> + good build tool like <img src="img/maven-logo.png"/></p>
   </div>
 
-  <div id="full-stack-java-dev-2" class="step" data-x="1000" data-y="-2500" data-z="1000" data-rotate="90">
+  <div id="full-stack-java-dev-why" class="step" data-x="500" data-y="-2500" data-rotate="90" data-scale="2">
     <h3>Why we talk about <strong>Full stack Java developer</strong>s?</h3>
   </div>
 
 
-  <div id="why-talk" class="step" data-x="0" data-y="-1500">
-    <h3>Why you talk about <strong>Full stack Java developer</strong>s?</h3>
-    <p>We came to listen for RectJS</p>
-      <pre><code class="java">
-        public class Shape {
-            public Shape (x, y) {
-                this.x = id;
-                this.y = y;
-            }
-        }
-
-        public class Rectangle extends Shape {
-            public Rectangle (x, y, width, height) {
-                super(x, y);
-                this.width  = width;
-                this.height = height;
-            }
-        }
-      </code></pre>
+  <div id="class-defs" class="step" data-x="1000" data-y="-1500">
+    <h3>Class definitions</h3>
+    <div class="col-md-6">
+      Java
+      <pre class="reset"><code class="java">
+public class Shape {
+  public Shape (x, y) {
+    this.x = id;
+    this.y = y;
+  }
+}</code></pre>
+    </div>
+    <div class="col-md-6">
+      ES6
+      <pre class="reset"><code class="javascript">
+class Shape {
+  constructor (x, y) {
+    this.x = x;
+    this.y = y;
+  }
+}</code></pre>
+    </div>
   </div>
 
-  <div id="classes" class="step" data-x="450" data-y="-1460">
-      <pre><code class="javascript">
-        class Shape {
-            constructor (x, y) {
-                this.x = x;
-                this.y = y;
-            }
-        }
-
-        class Rectangle extends Shape {
-            constructor (x, y, width, height) {
-                super(x, y);
-                this.width  = width;
-                this.height = height;
-            }
-        }
-      </code></pre>
+  <div id="inheritance" class="step" data-x="2000" data-y="-1500">
+    <h3>Inheritance</h3>
+    <div>
+      Java
+      <pre class="reset"><code class="java">
+public class Rectangle extends Shape {
+  public Rectangle (x, y, width, height) {
+    super(x, y);
+    this.width  = width;
+    this.height = height;
+  }
+}</code></pre>
+    </div>
+    <div>
+      ES6
+      <pre class="reset"><code class="javascript">
+class Rectangle extends Shape {
+  constructor (x, y, width, height) {
+    super(x, y);
+    this.width  = width;
+    this.height = height;
+  }
+}</code></pre>
+    </div>
   </div>
 
-  <div class="step slide" data-x="1000" data-y="-1500">
-      <q>Would you like to <strong>impress your audience</strong> with <strong>stunning visualization</strong> of your talk?</q>
+  <div id="lambda-expr" class="step" data-x="2000" data-y="-1500">
+    <h3>Lambda expressions</h3>
+    <div>
+      Java
+      <pre class="reset"><code class="java">
+IntPredicate event = i -> (i % 2) == 0;</code></pre>
+    </div>
+    <div>
+      ES6 (the name here is Arrows)
+      <pre class="reset"><code class="javascript">
+event = i => (i % 2) === 0</code></pre>
+    </div>
   </div>
 
   <!--
