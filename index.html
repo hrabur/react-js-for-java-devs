@@ -108,8 +108,7 @@
     <div class="row">
       <div class="col-md-6">
       Java
-      <pre class="reset"><code class="java">
-public class Shape {
+      <pre class="reset"><code class="java">public class Shape {
   public Shape (x, y) {
     this.x = id;
     this.y = y;
@@ -118,8 +117,7 @@ public class Shape {
       </div>
       <div class="col-md-6">
       ES6
-      <pre class="reset"><code class="javascript">
-class Shape {
+      <pre class="reset"><code class="javascript">class Shape {
   constructor (x, y) {
     this.x = x;
     this.y = y;
@@ -134,8 +132,7 @@ class Shape {
     <h3>Inheritance</h3>
     <div>
       Java
-      <pre class="reset"><code class="java">
-public class Rectangle extends Shape {
+      <pre class="reset"><code class="java">public class Rectangle extends Shape {
   public Rectangle (x, y, width, height) {
     super(x, y);
     this.width  = width;
@@ -145,8 +142,7 @@ public class Rectangle extends Shape {
     </div>
     <div>
       ES6
-      <pre class="reset"><code class="javascript">
-class Rectangle extends Shape {
+      <pre class="reset"><code class="javascript">class Rectangle extends Shape {
   constructor (x, y, width, height) {
     super(x, y);
     this.width  = width;
@@ -160,9 +156,8 @@ class Rectangle extends Shape {
     <h3>Lambda expressions</h3>
     <div class="row">
       <div class="col-md-6">
-      Java
-      <pre class="reset"><code class="java">
-OptionalInt sum =
+      Java (lambdas)
+      <pre class="reset"><code class="java">OptionalInt sum =
   IntStream.of(1, 2, 3, 4, 5)
     // 1, 3, 5
   .filter(i -> (i % 2) != 0)
@@ -172,9 +167,8 @@ OptionalInt sum =
   .reduce((i, a) -> a + i); </code></pre>
       </div>
       <div class="col-md-6">
-      ES6 (name here is Arrows)
-      <pre class="reset"><code class="javascript">
-let sum =
+      ES6 (arrows)
+      <pre class="reset"><code class="javascript">let sum =
   Array.of(1, 2, 3, 4, 5)
   // 1, 3, 5
   .filter(i => (i % 2) === 0)
@@ -191,28 +185,20 @@ let sum =
     <h3>Varargs</h3>
     <div class="row">
       <div class="col-md-6">
-      Java
-      <pre class="reset"><code class="java">
-  function f(x, ...y) {
-  // y is an Array
-  return x * y.length;
+      Java (varargs)
+      <pre class="reset"><code class="java">public int f(int x, int... y) {
+  // y is int[]
+	return x * y.length;
 }
-f(3, "hello", true) == 6
-
-function f(x, y, z) {
-  return x + y + z;
-}
-// Pass each elem of array as argument
-f(...[1,2,3]) == 6</code></pre>
+f(3, 5, 7) == 6</code></pre>
       </div>
       <div class="col-md-6">
-      ES6 (name here is Arrows)
-      <pre class="reset"><code class="javascript">
-function f(x, ...y) {
+      ES6 (rest and spread)
+      <pre class="reset"><code class="javascript">function f(x, ...y) {
   // y is an Array
   return x * y.length;
 }
-f(3, "hello", true) == 6
+f(3, 5, 7) == 6
 
 function f(x, y, z) {
   return x + y + z;
@@ -222,33 +208,16 @@ f(...[1,2,3]) == 6
 </code></pre>
       </div>
     </div>
-    <h4><b class="zoomin">Unfortunatley!</b><br/>
-      Java considers the <u>package</u> as a module,<br/>
-      where ES6 considers the <u>file</u> as a module</h4>
+    <h4><b class="zoomout">Unfortunatley!</b></br>
+      Java lacks something like the spread opperator</h4>
   </div>
 
 
-  <div id="modules" class="step" data-x="220" data-y="600" data-rotate="90" data-scale="0.2">
+  <div id="modules" class="step" data-x="220" data-y="800" data-rotate="90" data-scale="0.2">
     <h3>Modules</h3>
-    <div class="row">
-      <div class="col-md-6">
-      Java
-      <pre class="reset"><code class="java">
-// module-info.java
-// com/foo/bar/alpha/AlphaFactory.java
-// com/foo/bar/alpha/Alpha.java
-// ...
-
-// module-info.java
-module com.foo.bar {
-  requires org.baz.qux;
-  exports com.foo.bar.alpha;
-}</code></pre>
-      </div>
-      <div class="col-md-6">
-      ES6 (name here is Arrows)
-      <pre class="reset"><code class="javascript">
-// lib/math.js
+    <p>In ES6 file is named module. It may import or export functions,
+      objects or primitives from or to other modules</p>
+    <pre class="reset"><code class="javascript">// lib/math.js
 export default function sum(x, y) {
   return x + y;
 }
@@ -260,13 +229,9 @@ console.log("2π = " + math.sum(math.pi, math.pi));
 
 // example2.js
 import sum, {pi} from "lib/math";
-console.log("2π = " + sum(pi, pi));
-</code></pre>
-      </div>
-    </div>
-    <h4><b class="zoomin">Unfortunatley!</b><br/>
-      Java considers the <u>package</u> as a module,<br/>
-      where ES6 considers the <u>file</u> as a module</h4>
+console.log("2π = " + sum(pi, pi));</code></pre>
+    <h4>Import is much like Java imports, but export ...<br/>
+      <b class="zoomout">Just wait!</b> Java 9 is around the corner</h4>
   </div>
 
   <!--
