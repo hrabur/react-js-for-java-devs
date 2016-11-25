@@ -39,7 +39,7 @@
   <div id="outline" class="step slide" data-x="0" data-y="-1500" >
     <h2>What we'll talk about</h2>
     <ul>
-      <li>Full Stack Java Developer</li>
+      <li>A Good Java Developer</li>
       <li>Nowadays JavaScript tools</li>
       <li>Where is the old JavaScript</li>
       <li>ReactJS is my new Java UI</li>
@@ -59,8 +59,51 @@
     <h3>Why we talk about <strong>Full stack Java developer</strong>s?</h3>
   </div>
 
+  <div id="when-hear-js" class="step" data-x="1000" data-y="-500">
+    <h3>When you hear <b>JavaScript</b>?</h3>
+  </div>
 
-  <div id="class-defs" class="step" data-x="1000" data-y="-1500">
+  <div id="oldschool-js" class="step" data-x="1000" data-y="-100">
+    <p>Do you imagine something like this?</p>
+    <pre class="reset"><code class="html">&lt;html&gt;
+&lt;head&gt;
+  ...
+  &lt;script src=&quot;js/jquery.js&quot;&gt;&lt;/script&gt;
+  &lt;script&gt;
+    $(document).ready(function() {
+      // Do something at the begining
+    });
+    function showAlert(event) {
+      alert(&quot;Button has been pressed&quot;);
+    }
+  &lt;/script&gt;
+&lt;/head&gt;
+&lt;body&gt;
+  ...
+  &lt;input type=&quot;button&quot; onclick=&quot;showAlert()&quot; value=&quot;Submit&quot; /&gt;
+  ...
+&lt;/body&gt;
+&lt;/html&gt;</code></pre>
+  </div>
+
+  <div id="nowadays-js" class="step" data-x="1000" data-y="500">
+    <p>Or you imagine something like this?</p>
+    <p class="text-center">
+      <img src="img/nodejs-logo.svg" height="150px"/>
+      <img src="img/npm-logo.svg" height="70"/></br>
+      <img src="img/es6-logo.svg" height="150px"/>
+      <img src="img/babel-logo.svg" height="100px"/></span></p>
+    <p><b class="rotate">Yes!</b> JavaScript is now modern language with first class tooling</p>
+  </div>
+
+  <div id="es6-zoomin" class="step" data-x="400" data-y="350" data-rotate="90">
+    <h2>Lets have closer look on
+      <img src="img/es6-logo.svg" height="100px" style="vertical-align: bottom"/></br>
+      <small><em>(looking from the eyes of a Java Developer)</em></small></h2>
+  </div>
+
+
+  <div id="class-defs" class="step" data-x="220" data-y="0" data-rotate="90" data-scale="0.2">
     <h3>Class definitions</h3>
     <div class="row">
       <div class="col-md-6">
@@ -84,10 +127,10 @@ class Shape {
 }</code></pre>
       </div>
     </div>
-    <h4><b class="rotating">Wooow!</b> JavaScript is cattching up Java in OOP</h4>
+    <h4><b class="rotate">Wooow!</b> JavaScript is cattching up Java in OOP</h4>
   </div>
 
-  <div id="inheritance" class="step" data-x="2000" data-y="-1500">
+  <div id="inheritance" class="step" data-x="220" data-y="200" data-rotate="90" data-scale="0.2">
     <h3>Inheritance</h3>
     <div>
       Java
@@ -113,7 +156,7 @@ class Rectangle extends Shape {
     </div>
   </div>
 
-  <div id="lambda-expr" class="step" data-x="3000" data-y="-1500">
+  <div id="lambda-expr" class="step" data-x="220" data-y="400" data-rotate="90" data-scale="0.2">
     <h3>Lambda expressions</h3>
     <div class="row">
       <div class="col-md-6">
@@ -141,10 +184,51 @@ let sum =
   .reduce((i, a) => i + a); </code></pre>
       </div>
     </div>
-    <h4><b class="rotating">Yeeeeah!</b> Java don't give up</h4>
+    <h4><b class="moveup">Yeeeeah!</b> Java don't give up</h4>
   </div>
 
-  <div id="modules" class="step" data-x="4000" data-y="-1500">
+  <div id="varargs" class="step" data-x="220" data-y="600" data-rotate="90" data-scale="0.2">
+    <h3>Varargs</h3>
+    <div class="row">
+      <div class="col-md-6">
+      Java
+      <pre class="reset"><code class="java">
+  function f(x, ...y) {
+  // y is an Array
+  return x * y.length;
+}
+f(3, "hello", true) == 6
+
+function f(x, y, z) {
+  return x + y + z;
+}
+// Pass each elem of array as argument
+f(...[1,2,3]) == 6</code></pre>
+      </div>
+      <div class="col-md-6">
+      ES6 (name here is Arrows)
+      <pre class="reset"><code class="javascript">
+function f(x, ...y) {
+  // y is an Array
+  return x * y.length;
+}
+f(3, "hello", true) == 6
+
+function f(x, y, z) {
+  return x + y + z;
+}
+// Pass each elem of array as argument
+f(...[1,2,3]) == 6
+</code></pre>
+      </div>
+    </div>
+    <h4><b class="zoomin">Unfortunatley!</b><br/>
+      Java considers the <u>package</u> as a module,<br/>
+      where ES6 considers the <u>file</u> as a module</h4>
+  </div>
+
+
+  <div id="modules" class="step" data-x="220" data-y="600" data-rotate="90" data-scale="0.2">
     <h3>Modules</h3>
     <div class="row">
       <div class="col-md-6">
@@ -180,7 +264,7 @@ console.log("2π = " + sum(pi, pi));
 </code></pre>
       </div>
     </div>
-    <h4><b class="scale">Unfortunatley!</b><br/>
+    <h4><b class="zoomin">Unfortunatley!</b><br/>
       Java considers the <u>package</u> as a module,<br/>
       where ES6 considers the <u>file</u> as a module</h4>
   </div>
