@@ -90,7 +90,8 @@
     <p>Or you imagine something like this?</p>
     <p class="text-center">
       <img src="img/nodejs-logo.svg" height="150px"/>
-      <img src="img/npm-logo.svg" height="70"/></br>
+      <img src="img/npm-logo.svg" height="70"/>
+      <img src="img/webpack-logo.png" height="150px"/></br>
       <img src="img/es6-logo.svg" height="150px"/>
       <img src="img/babel-logo.svg" height="100px"/></span></p>
     <p><b class="rotate">Yes!</b> JavaScript is now modern language with first class tooling</p>
@@ -99,7 +100,7 @@
   <div id="es6-zoomin" class="step" data-x="400" data-y="350" data-rotate="90">
     <h2>Lets have closer look on
       <img src="img/es6-logo.svg" height="100px" style="vertical-align: bottom"/></br>
-      <small><em>(looking from the eyes of a Java Developer)</em></small></h2>
+      <small><em>looking trough the eyes of a Java Developer</em></small></h2>
   </div>
 
 
@@ -234,93 +235,136 @@ console.log("2π = " + sum(pi, pi));</code></pre>
       <b class="zoomout">Just wait!</b> Java 9 is around the corner</h4>
   </div>
 
-  <!--
+  <div id="npm-webpack-zoomin" class="step" data-x="-50" data-y="350" data-rotate="90">
+    <h2>Let see <img src="img/npm-logo.svg" height="70px" style="vertical-align: middle"/>
+      and <img src="img/webpack-logo.png" height="120px" style="vertical-align: middle"/></h2>
+  </div>
 
-      This is an example of step element being scaled.
+  <div id="npm-maven-diff1" class="step slide" data-x="-200" data-y="0" data-rotate="90" data-scale="0.2">
+    <h3>Maven vs NPM + webpack</h3>
+    <table class="table table-condensed table-stripped">
+      <tr>
+        <th></th>
+        <th>Maven</th>
+        <th>NPM</th>
+        <th>webpack</th>
+      </tr>
+      <tr>
+        <td>Declarative model</td>
+        <td>yes</td>
+        <td>yes</td>
+        <td>mixed</td>
+      </tr>
+      <tr>
+        <td>Dependencies resolution</td>
+        <td>yes</td>
+        <td>yes</td>
+        <td>no</td>
+      </tr>
+      <tr>
+        <td>Transitive dependencies</td>
+        <td>yes</td>
+        <td>yes</td>
+        <td>no</td>
+      </tr>
+      <tr>
+        <td>Default central repo</td>
+        <td>yes</td>
+        <td>yes</td>
+        <td>no</td>
+      </tr>
+      <tr>
+        <td>Configurable repos</td>
+        <td>yes</td>
+        <td>yes</td>
+        <td>no</td>
+      </tr>
+    </table>
+  </div>
 
-      Again, we use a `data-` attribute, this time it's `data-scale="4"`, so it means that this
-      element will be 4 times larger than the others.
-      From presentation and transitions point of view it means, that it will have to be scaled
-      down (4 times) to make it back to its correct size.
+  <div id="npm-maven-diff2" class="step slide" data-x="-200" data-y="200" data-rotate="90" data-scale="0.2">
+    <h3>Maven vs NPM + webpack</h3>
+    <table class="table table-condensed table-stripped">
+      <tr>
+        <th></th>
+        <th>Maven</th>
+        <th>NPM</th>
+        <th>webpack</th>
+      </tr>
+      <tr>
+        <td>Build lyfecycle</td>
+        <td>yes</td>
+        <td>yes</td>
+        <td>yes</td>
+      </tr>
+      <tr>
+        <td>Packaging support</td>
+        <td>yes</td>
+        <td>no</td>
+        <td>yes</td>
+      </tr>
+      <tr>
+        <td>Plugins</td>
+        <td>yes</td>
+        <td>no</td>
+        <td>yes</td>
+      </tr>
+      <tr>
+        <td>Tests execution</td>
+        <td>yes</td>
+        <td>yes</td>
+        <td>yes</td>
+      </tr>
+    </table>
+    <h4><b class="rotate">Nice!</b> NPM + webpack gives Maven</h4>
+  </div>
 
-  -->
-  <div id="title" class="step" data-x="0" data-y="0" data-scale="4">
+  <div id="npm-maven-diff3" class="step" data-x="-200" data-y="400" data-rotate="90" data-scale="0.2">
+    <h3>Project description file</h3>
+    <div class="row">
+      <div class="col-md-6">
+      Maven (pom.xml)
+      <pre class="reset"><code class="java">&lt;project&gt;
+	&lt;groupId&gt;
+	&lt;artifactId&gt;
+	&lt;version&gt;
+	&lt;packaging&gt;
+	&lt;description&gt;
+	&lt;repositories&gt;
+		&lt;repository&gt;
+	&lt;dependencies&gt;
+		&lt;dependency&gt;
+	...
+&lt;/package&gt;</code></pre>
+      </div>
+      <div class="col-md-6">
+      NPM (package.json)
+      <pre class="reset"><code class="javascript">{
+  "name": "impress",
+  "version": "0.1.1",
+  "description": "...",
+  "repository": "...",
+  "dependencies": {
+    "fs-plus": "^2.0.0",
+    ...
+  },
+  "devDependencies": {
+    "babel-core": "^6.1.2",
+    ...
+  }
+}</code></pre>
+      </div>
+    </div>
+  </div>
+
+  <div id="reactjs-ready" class="step" data-x="0" data-y="0" data-scale="4">
       <span class="try">then you should try</span>
       <h1>impress.js<sup>*</sup></h1>
       <span class="footnote"><sup>*</sup> no rhyme intended</span>
   </div>
 
-  <!--
-
-      This element introduces rotation.
-
-      Notation shouldn't be a surprise. We use `data-rotate="90"` attribute, meaning that this
-      element should be rotated by 90 degrees clockwise.
-
-  -->
-  <div id="its" class="step" data-x="850" data-y="3000" data-rotate="90" data-scale="5">
-      <p>It’s a <strong>presentation tool</strong> <br/>
-      inspired by the idea behind <a href="http://prezi.com">prezi.com</a> <br/>
-      and based on the <strong>power of CSS3 transforms and transitions</strong> in modern browsers.</p>
+  <div id="overview" class="step" data-x="1000" data-y="-800" data-scale="7">
   </div>
-
-  <div id="big" class="step" data-x="3500" data-y="2100" data-rotate="180" data-scale="6">
-      <p>visualize your <b>big</b> <span class="thoughts">thoughts</span></p>
-  </div>
-
-  <!--
-
-      And now it gets really exciting! We move into third dimension!
-
-      Along with `data-x` and `data-y`, you can define the position on third (Z) axis, with
-      `data-z`. In the example below we use `data-z="-3000"` meaning that element should be
-      positioned far away from us (by 3000px).
-
-  -->
-  <div id="tiny" class="step" data-x="2825" data-y="2325" data-z="-3000" data-rotate="300" data-scale="1">
-      <p>and <b>tiny</b> ideas</p>
-  </div>
-
-  <!--
-
-      This step here doesn't introduce anything new when it comes to data attributes, but you
-      should notice in the demo that some words of this text are being animated.
-      It's a very basic CSS transition that is applied to the elements when this step element is
-      reached.
-
-      At the very beginning of the presentation all step elements are given the class of `future`.
-      It means that they haven't been visited yet.
-
-      When the presentation moves to given step `future` is changed to `present` class name.
-      That's how animation on this step works - text moves when the step has `present` class.
-
-      Finally when the step is left the `present` class is removed from the element and `past`
-      class is added.
-
-      So basically every step element has one of three classes: `future`, `present` and `past`.
-      Only one current step has the `present` class.
-
-  -->
-  <div id="ing" class="step" data-x="3500" data-y="-850" data-rotate="270" data-scale="6">
-      <p>by <b class="positioning">positioning</b>, <b class="rotating">rotating</b> and <b class="scaling">scaling</b> them on an infinite canvas</p>
-  </div>
-
-  <div id="imagination" class="step" data-x="6700" data-y="-300" data-scale="6">
-      <p>the only <b>limit</b> is your <b class="imagination">imagination</b></p>
-  </div>
-
-  <div id="source" class="step" data-x="6300" data-y="2000" data-rotate="20" data-scale="4">
-      <p>want to know more?</p>
-      <q><a href="http://github.com/bartaz/impress.js">use the source</a>, Luke!</q>
-  </div>
-
-  <div id="one-more-thing" class="step" data-x="6000" data-y="4000" data-scale="2">
-      <p>one more thing...</p>
-  </div>
-
-    <div id="overview" class="step" data-x="3000" data-y="1500" data-scale="10">
-    </div>
-
 </div>
 
 <script src="js/impress.js"></script>
