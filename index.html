@@ -357,10 +357,119 @@ console.log("2π = " + sum(pi, pi));</code></pre>
     </div>
   </div>
 
-  <div id="reactjs-ready" class="step" data-x="0" data-y="0" data-scale="4">
-      <span class="try">then you should try</span>
-      <h1>impress.js<sup>*</sup></h1>
-      <span class="footnote"><sup>*</sup> no rhyme intended</span>
+  <div id="ok-but-why-js" class="step" data-x="-600" data-y="0" data-scale="2" data-rotate="270">
+    <div class="row">
+      <div class="col-md-3" style="border-right: 2px solid gray; text-align: right">
+        <i style="font-size: 90px">OK!</i>
+      </div>
+      <div class="col-md-9" style="padding: 16px">
+        Its clear ES6 is much like Java</br>
+        NPM + webpack do the same as Maven.
+      </div>
+    </div>
+    <h4 class="text-center">But ... Why use JS library like ReactJS for UI?</h4>
+  </div>
+
+  <div id="old-friends" class="step slide" data-x="-1700" data-y="0" data-scale="2" data-rotate="90">
+    <h3>JSP + Tag libs</h3>
+    Used masivelly, but even Oracle removed them form the official Java EE 7 tutorial
+    <h3>Java Server Faces (JSF)</h3>
+    <blockquote style="font-size: 26px">
+      <p>The RichFaces project has reached end-of-life in June 2016</p>
+      <p>Another option ... is to switch to any of the modern frameworks that are leveraging HTML5 and JavaScript.</p>
+      <footer><cite>http://richfaces.jboss.org/</cite></footer>
+  </div>
+
+  <div id="reactjs-overview" class="step" data-x="-2500" data-y="-1500" data-rotate="180">
+    <h3><img src="img/react-logo.png" height="150px"/></h3>
+    <ul>
+      <li>A JavaScript library for building UIs</li>
+      <li>Open sourced by Facebook</li>
+      <li>Used by large enterprises</br>Facebook, AirBnB, BBC, Atlasian, Deezer, Yahoo, etc.</li>
+      <li>Vibrant comunity, a lot of tutorials, regular releases, etc.</li>
+      <li>Mix and mach with libraries of your choice (like jQuery)</li>
+      <li><b class="rotate">Easy</b> to learn by Java Developers</p>
+    </ul>
+  </div>
+
+  <div id="components-based" class="step" data-x="-2500" data-y="-2300" data-rotate="180">
+    <h3>ReactJS is components based</h3>
+    <img src="img/components-based.png" />
+  </div>
+
+  <div id="stateless-component" class="step" data-x="-1500" data-y="-2700" data-rotate="270">
+    <h3>How simple stateless component looks like</h3>
+    <pre class="reset"><code class="javascript">class HelloMessage extends React.Component {
+  render() {
+    return &lt;div&gt;Hello {this.props.name}&lt;/div&gt;;
+  }
+}
+// Render it
+ReactDOM.render(&ltHelloMessage name="Plovdev" /&gt;, mountNode);</code></pre>
+    Or even simpler (if there is only render method)
+    <pre class="reset"><code class="javascript">const HelloMessage = (props) => &lt;div&gt;Hello {props.name}&lt;/div&gt;;
+// Render it
+ReactDOM.render(&ltHelloMessage name="Plovdev" /&gt;, mountNode);</code></pre>
+  </div>
+
+  <div id="have-you-notice" class="step" class="step" data-x="-800" data-y="-2700" data-rotate="270">
+    <h3>Have you notice it?</h3>
+    Most of the JS libraries have HTML templates with some expression language
+    for the bindings and logical operations
+    <pre class="reset"><code class="html">&lt;table&gt;
+  &lt;tr ng-repeat=&quot;x in names&quot;&gt;
+    &lt;td&gt;{{ x.Name }}&lt;/td&gt;
+    &lt;td&gt;{{ x.Country }}&lt;/td&gt;
+  &lt;/tr&gt;
+&lt;/table&gt;</code></pre>
+    ReactJS is JavaScript with HTML like syntax (JSX) inside
+    <pre class="reset"><code class="javascript">const Table = (props) =&gt; (
+  &lt;table&gt;
+    {props.items.map(item =&gt; (
+      &lt;tr&gt;
+      	&lt;td&gt;{item.name}&lt;/td&gt;
+        &lt;td&gt;{item.country}&lt;/td&gt;
+      &lt;/tr&gt;
+    ))}
+  &lt;/table&gt;
+);</code></pre>
+  </div>
+
+  <div id="statefull-components" class="step" class="step" data-x="-1350" data-y="-4000" data-rotate="270">
+    <h3>Component could be stateful<br/><small>like any Java class :-)</small></h3>
+    <pre class="reset"><code class="javascript">class TogleButton extends React.Component {
+  constructor(props) {
+    super(props);
+    this.state = { pushed: true };
+  }
+
+  togle() {
+    this.setState((prevState) =&gt; ({
+      pushed: !prevState.pushed
+    }));
+  }
+
+  render() {
+    return (
+      &lt;input
+      	type=&quot;button&quot;
+      	className={this.state.pushed ? 'up' : 'down'}
+        onClick={this.togle}
+        value=&quot;Togle&quot;
+      /&gt;
+    );
+  }
+}</code></pre>
+  </div>
+
+  <div id="ui-function-of-state" class="step" class="step" data-x="-650" data-y="-4000" data-rotate="270">
+    <h3><b class="zoomout">Remember!</b><br/>
+      ReactJS UI is function of the state</h3>
+    <p>If you need to update the UI</p>
+      <ol>
+        <li>you update the state</li>
+        <li>ReactJS takes care to update the UI</li>
+      </ol>
   </div>
 
   <div id="overview" class="step" data-x="1000" data-y="-800" data-scale="7">
